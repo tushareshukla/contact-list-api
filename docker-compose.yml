@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    container_name: contact-list-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      # Add other environment variables as needed
+    depends_on:
+      - mongodb
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
