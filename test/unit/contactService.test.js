@@ -2,9 +2,9 @@
 
 const { expect } = require('chai');
 const sinon = require('sinon');
-const Contact = require('../../models/Contact');
-const PhoneNumber = require('../../models/PhoneNumber');
-const contactService = require('../../services/contactService');
+const Contact = require('../../src/models/Contact');
+const PhoneNumber = require('../../src/models/PhoneNumber');
+const contactService = require('../../src/services/contactService');
 
 describe('Contact Service', () => {
   describe('createContact', () => {

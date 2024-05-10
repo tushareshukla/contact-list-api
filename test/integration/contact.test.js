@@ -1,7 +1,7 @@
 // test/integration/contact.test.js
 
 const request = require('supertest');
-const app = require('../../app');
+const app = require('../../src/app');
 const mongoose = require('mongoose');
 
 describe('Contact API', () => {
